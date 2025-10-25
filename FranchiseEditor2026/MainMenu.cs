@@ -11,5 +11,12 @@ namespace FranchiseEditor2026
         {
             Close();
         }
+
+        private void rosterEditor_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (RosterEditor rui = new()) rui.ShowDialog();
+            Show();
+        }
     }
 }

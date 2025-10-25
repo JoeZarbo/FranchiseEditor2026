@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "FranchiseEditor2026": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "FRANCHISE_CONSTR": "Server=DESKTOP-RCR4GMO\\FRANCHISE;Database=Franchise26;Trusted_Connection=True;Encrypt=False"
+      }
+    }
+  }
+}

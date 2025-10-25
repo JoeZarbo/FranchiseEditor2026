@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            button1 = new Button();
+            rosterEditor = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
@@ -46,14 +46,15 @@
             label1.TabIndex = 0;
             label1.Text = "main menu";
             // 
-            // button1
+            // rosterEditor
             // 
-            button1.Location = new Point(13, 42);
-            button1.Name = "button1";
-            button1.Size = new Size(342, 36);
-            button1.TabIndex = 1;
-            button1.Text = "Roster Editor";
-            button1.UseVisualStyleBackColor = true;
+            rosterEditor.Location = new Point(13, 42);
+            rosterEditor.Name = "rosterEditor";
+            rosterEditor.Size = new Size(342, 36);
+            rosterEditor.TabIndex = 1;
+            rosterEditor.Text = "Roster Editor";
+            rosterEditor.UseVisualStyleBackColor = true;
+            rosterEditor.Click += this.rosterEditor_Click;
             // 
             // button2
             // 
@@ -111,7 +112,7 @@
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(rosterEditor);
             Controls.Add(label1);
             Font = new Font("Katahdin Round", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -128,7 +129,7 @@
         #endregion
 
         private Label label1;
-        private Button button1;
+        private Button rosterEditor;
         private Button button2;
         private Button button3;
         private Button button4;
