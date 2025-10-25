@@ -32,7 +32,7 @@
             rosterEditor = new Button();
             playerEditor = new Button();
             draftEditor = new Button();
-            button4 = new Button();
+            schedule = new Button();
             close = new Button();
             button5 = new Button();
             SuspendLayout();
@@ -74,16 +74,17 @@
             draftEditor.TabIndex = 3;
             draftEditor.Text = "Draft Editor";
             draftEditor.UseVisualStyleBackColor = true;
-            draftEditor.Click += this.draftEditor_Click;
+            draftEditor.Click += draftEditor_Click;
             // 
-            // button4
+            // schedule
             // 
-            button4.Location = new Point(361, 84);
-            button4.Name = "button4";
-            button4.Size = new Size(342, 36);
-            button4.TabIndex = 4;
-            button4.Text = "Schedule Creator";
-            button4.UseVisualStyleBackColor = true;
+            schedule.Location = new Point(361, 84);
+            schedule.Name = "schedule";
+            schedule.Size = new Size(342, 36);
+            schedule.TabIndex = 4;
+            schedule.Text = "Schedule Creator";
+            schedule.UseVisualStyleBackColor = true;
+            schedule.Click += schedule_Click;
             // 
             // close
             // 
@@ -111,7 +112,7 @@
             ClientSize = new Size(715, 172);
             Controls.Add(button5);
             Controls.Add(close);
-            Controls.Add(button4);
+            Controls.Add(schedule);
             Controls.Add(draftEditor);
             Controls.Add(playerEditor);
             Controls.Add(rosterEditor);
@@ -134,7 +135,7 @@
         private Button rosterEditor;
         private Button playerEditor;
         private Button draftEditor;
-        private Button button4;
+        private Button schedule;
         private Button close;
         private Button button5;
     }

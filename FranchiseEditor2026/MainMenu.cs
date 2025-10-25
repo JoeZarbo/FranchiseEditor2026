@@ -30,5 +30,12 @@ namespace FranchiseEditor2026
         {
             MessageBox.Show("To be implemented later");
         }
+
+        private void schedule_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (ScheduleCreator sui = new()) sui.ShowDialog();
+            Show();
+        }
     }
 }
