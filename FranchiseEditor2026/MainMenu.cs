@@ -18,5 +18,17 @@ namespace FranchiseEditor2026
             using (RosterEditor rui = new()) rui.ShowDialog();
             Show();
         }
+
+        private void playerEditor_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (PlayerEditor pui = new()) pui.ShowDialog();
+            Show();
+        }
+
+        private void draftEditor_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("To be implemented later");
+        }
     }
 }

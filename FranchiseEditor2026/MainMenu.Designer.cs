@@ -30,8 +30,8 @@
         {
             label1 = new Label();
             rosterEditor = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            playerEditor = new Button();
+            draftEditor = new Button();
             button4 = new Button();
             close = new Button();
             button5 = new Button();
@@ -54,25 +54,27 @@
             rosterEditor.TabIndex = 1;
             rosterEditor.Text = "Roster Editor";
             rosterEditor.UseVisualStyleBackColor = true;
-            rosterEditor.Click += this.rosterEditor_Click;
+            rosterEditor.Click += rosterEditor_Click;
             // 
-            // button2
+            // playerEditor
             // 
-            button2.Location = new Point(361, 42);
-            button2.Name = "button2";
-            button2.Size = new Size(342, 36);
-            button2.TabIndex = 2;
-            button2.Text = "Player Editor";
-            button2.UseVisualStyleBackColor = true;
+            playerEditor.Location = new Point(361, 42);
+            playerEditor.Name = "playerEditor";
+            playerEditor.Size = new Size(342, 36);
+            playerEditor.TabIndex = 2;
+            playerEditor.Text = "Player Editor";
+            playerEditor.UseVisualStyleBackColor = true;
+            playerEditor.Click += playerEditor_Click;
             // 
-            // button3
+            // draftEditor
             // 
-            button3.Location = new Point(13, 84);
-            button3.Name = "button3";
-            button3.Size = new Size(342, 36);
-            button3.TabIndex = 3;
-            button3.Text = "Draft Editor";
-            button3.UseVisualStyleBackColor = true;
+            draftEditor.Location = new Point(13, 84);
+            draftEditor.Name = "draftEditor";
+            draftEditor.Size = new Size(342, 36);
+            draftEditor.TabIndex = 3;
+            draftEditor.Text = "Draft Editor";
+            draftEditor.UseVisualStyleBackColor = true;
+            draftEditor.Click += this.draftEditor_Click;
             // 
             // button4
             // 
@@ -110,8 +112,8 @@
             Controls.Add(button5);
             Controls.Add(close);
             Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(draftEditor);
+            Controls.Add(playerEditor);
             Controls.Add(rosterEditor);
             Controls.Add(label1);
             Font = new Font("Katahdin Round", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -130,8 +132,8 @@
 
         private Label label1;
         private Button rosterEditor;
-        private Button button2;
-        private Button button3;
+        private Button playerEditor;
+        private Button draftEditor;
         private Button button4;
         private Button close;
         private Button button5;
