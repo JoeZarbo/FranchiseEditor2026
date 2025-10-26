@@ -28,7 +28,9 @@ namespace FranchiseEditor2026
 
         private void draftEditor_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("To be implemented later");
+            Hide();
+            using (DraftController dui = new()) dui.ShowDialog();
+            Show();
         }
 
         private void schedule_Click(object sender, EventArgs e)
