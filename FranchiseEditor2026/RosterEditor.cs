@@ -192,9 +192,27 @@ namespace FranchiseEditor2026
                     if (rows > 0)
                     {
                         MessageBox.Show($"{fullName} is {(start == 1 ? "now" : "no longer")} a starter");
-                        LoadPlayers(((KeyValuePair<int, string>)teamSel.SelectedItem).Key);
+                        if (start == 0) LoadPlayers(((KeyValuePair<int, string>)teamSel.SelectedItem).Key);
                     }
                     else MessageBox.Show($"Error: {fullName} not found");
+                }
+                if (start == 1)
+                {
+                    query = "UPDATE Roster SET position = @position WHERE playerID = @playerID";
+                    string position = new SpecialPositionSelect().GetPos();
+                    using (SqlCommand conn = new(conStr)) 
+                    {
+                        conn.Open();
+                        SqlCommand cmd = new(query, conn);
+                        cmd.Parameters.AddWithValue("@position", position);
+                        cmd.Parameters.AddWithValue("@playerID", playerID);
+                        if (cmd.ExecuteNonQuery() > 0) 
+                        {
+                            MessageBox.Show($"{fullName}'s new position is now \"{position}\"");
+                            LoadPlayers(((KeyValuePair<int, string>)teamSel.SelectedItem).Key);
+                        }
+                        else MessageBox.Show($"Error: {fullName} not found");
+                    }
                 }
             }
             else MessageBox.Show($"Error: You may only select one player to change starting status. You selected {playerGrid.SelectedRows.Count} rows");
