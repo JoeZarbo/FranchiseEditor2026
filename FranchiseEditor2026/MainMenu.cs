@@ -39,5 +39,33 @@ namespace FranchiseEditor2026
             using (ScheduleCreator sui = new()) sui.ShowDialog();
             Show();
         }
+
+        private void potw_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (POTWUI pui = new()) pui.ShowDialog();
+            Show();
+        }
+
+        private void h2hCont_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (HeadToHead hui = new()) hui.ShowDialog();
+            Show();
+        }
+
+        private void teamAdd_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (teamGame tui = new()) tui.ShowDialog();
+            Show();
+        }
+
+        private void playerAdd_Click(object sender, EventArgs e)
+        {
+            Hide();
+            using (playerGame pui = new()) pui.ShowDialog();
+            Show();
+        }
     }
 }

@@ -100,7 +100,7 @@ namespace FranchiseEditor2026
 
                     p.score += dr.GetInt32(21) * 0.25; //tackles
                     p.score += dr.GetInt32(23); //TFL
-                    p.score += Math.Pow(1.5, (double)dr.GetDecimal(22) * 3) - 1; //sacks
+                    p.score += Math.Pow(1.5, (double)dr.GetDecimal(20) * 3) - 1; //sacks
                     p.score += Math.Pow(1.5, (dr.GetInt32(24) + dr.GetInt32(29)) * 6) - 1; //interceptions fumbles
                     p.score += 500 * (dr.GetInt32(26) + dr.GetInt32(32)); //touchdowns
                     p.score += 30 * dr.GetInt32(33); //blocks
@@ -120,7 +120,7 @@ namespace FranchiseEditor2026
             using (SqlConnection conn = new(conStr))
             {
                 conn.Open();
-                string query = "SELECT * FROM playerGame INNER JOIN player ON playerGame.playerID = player.playerID INNER JOIN team ON playerGame.team = team.teamID WHERE week = @week AND year = @year AND playerID = @playerID";
+                string query = "SELECT * FROM playerGame INNER JOIN player ON playerGame.playerID = player.playerID INNER JOIN team ON playerGame.team = team.teamID WHERE week = @week AND year = @year AND player.playerID = @playerID";
                 SqlCommand cmd = new(query, conn);
                 cmd.Parameters.AddWithValue("@week", (int)weekSel.Value);
                 cmd.Parameters.AddWithValue("@year", (int)yearSel.Value);
@@ -161,7 +161,7 @@ namespace FranchiseEditor2026
 
                     p.score += dr.GetInt32(21) * 0.25; //tackles
                     p.score += dr.GetInt32(23); //TFL
-                    p.score += Math.Pow(1.5, (double)dr.GetDecimal(22) * 3) - 1; //sacks
+                    p.score += Math.Pow(1.5, (double)dr.GetDecimal(20) * 3) - 1; //sacks
                     p.score += Math.Pow(1.5, (dr.GetInt32(24) + dr.GetInt32(29)) * 6) - 1; //interceptions fumbles
                     p.score += 500 * (dr.GetInt32(26) + dr.GetInt32(32)); //touchdowns
                     p.score += 30 * dr.GetInt32(33); //blocks

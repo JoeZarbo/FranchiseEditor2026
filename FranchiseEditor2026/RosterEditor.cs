@@ -59,6 +59,8 @@ namespace FranchiseEditor2026
                 playerGrid.Columns[4].HeaderText = "Position";
                 playerGrid.Columns[5].HeaderText = "Starter";
             }
+            playerSearch.Clear();
+            playerSearch.Focus();
         }
 
         private void teamSel_SelectedIndexChanged(object sender, EventArgs e)

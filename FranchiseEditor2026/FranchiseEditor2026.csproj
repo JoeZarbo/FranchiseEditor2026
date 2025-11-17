@@ -8,7 +8,23 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
     <ForceDesignerDPIUnaware>true</ForceDesignerDPIUnaware>
+    <ApplicationIcon>offseason.ico</ApplicationIcon>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <SignAssembly>True</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <PackageIcon>offseason.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="offseason.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Current YT Vid\misc\offseason.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.2" />

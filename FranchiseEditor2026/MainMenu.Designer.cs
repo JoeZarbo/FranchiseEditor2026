@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             label1 = new Label();
             rosterEditor = new Button();
             playerEditor = new Button();
             draftEditor = new Button();
             schedule = new Button();
             close = new Button();
-            button5 = new Button();
+            potw = new Button();
+            h2hCont = new Button();
+            teamAdd = new Button();
+            playerAdd = new Button();
             SuspendLayout();
             // 
             // label1
@@ -88,29 +92,63 @@
             // 
             // close
             // 
-            close.Location = new Point(361, 126);
+            close.Location = new Point(12, 210);
             close.Name = "close";
-            close.Size = new Size(342, 36);
-            close.TabIndex = 6;
+            close.Size = new Size(690, 36);
+            close.TabIndex = 9;
             close.Text = "close";
             close.UseVisualStyleBackColor = true;
             close.Click += close_Click;
             // 
-            // button5
+            // potw
             // 
-            button5.Location = new Point(13, 126);
-            button5.Name = "button5";
-            button5.Size = new Size(342, 36);
-            button5.TabIndex = 5;
-            button5.Text = "Player of the Week";
-            button5.UseVisualStyleBackColor = true;
+            potw.Location = new Point(13, 126);
+            potw.Name = "potw";
+            potw.Size = new Size(342, 36);
+            potw.TabIndex = 5;
+            potw.Text = "Player of the Week";
+            potw.UseVisualStyleBackColor = true;
+            potw.Click += potw_Click;
+            // 
+            // h2hCont
+            // 
+            h2hCont.Location = new Point(361, 126);
+            h2hCont.Name = "h2hCont";
+            h2hCont.Size = new Size(342, 36);
+            h2hCont.TabIndex = 6;
+            h2hCont.Text = "head to head";
+            h2hCont.UseVisualStyleBackColor = true;
+            h2hCont.Click += h2hCont_Click;
+            // 
+            // teamAdd
+            // 
+            teamAdd.Location = new Point(13, 168);
+            teamAdd.Name = "teamAdd";
+            teamAdd.Size = new Size(342, 36);
+            teamAdd.TabIndex = 7;
+            teamAdd.Text = "team game";
+            teamAdd.UseVisualStyleBackColor = true;
+            teamAdd.Click += teamAdd_Click;
+            // 
+            // playerAdd
+            // 
+            playerAdd.Location = new Point(361, 168);
+            playerAdd.Name = "playerAdd";
+            playerAdd.Size = new Size(341, 36);
+            playerAdd.TabIndex = 8;
+            playerAdd.Text = "player game";
+            playerAdd.UseVisualStyleBackColor = true;
+            playerAdd.Click += playerAdd_Click;
             // 
             // MainMenu
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(715, 172);
-            Controls.Add(button5);
+            ClientSize = new Size(715, 251);
+            Controls.Add(playerAdd);
+            Controls.Add(teamAdd);
+            Controls.Add(h2hCont);
+            Controls.Add(potw);
             Controls.Add(close);
             Controls.Add(schedule);
             Controls.Add(draftEditor);
@@ -119,6 +157,7 @@
             Controls.Add(label1);
             Font = new Font("Katahdin Round", 20F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MainMenu";
@@ -137,6 +176,9 @@
         private Button draftEditor;
         private Button schedule;
         private Button close;
-        private Button button5;
+        private Button potw;
+        private Button h2hCont;
+        private Button teamAdd;
+        private Button playerAdd;
     }
 }

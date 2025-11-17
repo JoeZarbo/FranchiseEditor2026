@@ -42,6 +42,8 @@ namespace FranchiseEditor2026
                 playerGrid.Columns[4].Visible = false;
                 playerGrid.Columns[5].Visible = false;
             }
+            playerSearch.Clear();
+            playerSearch.Focus();
         }
 
         private void DraftController_Load(object sender, EventArgs e)

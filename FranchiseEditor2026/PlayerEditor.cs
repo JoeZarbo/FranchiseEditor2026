@@ -32,6 +32,8 @@ namespace FranchiseEditor2026
                 playerGrid.Columns[1].HeaderText = "First Name";
                 playerGrid.Columns[2].HeaderText = "Last Name";
             }
+            playerSearch.Clear();
+            playerSearch.Focus();
         }
 
         private void PlayerEditor_Load(object sender, EventArgs e)

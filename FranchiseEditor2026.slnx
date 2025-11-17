@@ -2,5 +2,7 @@
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
   </Folder>
-  <Project Path="FranchiseEditor2026/FranchiseEditor2026.csproj" />
+  <Project Path="FranchiseEditor2026/FranchiseEditor2026.csproj">
+    <BuildType Project="Release" />
+  </Project>
 </Solution>
