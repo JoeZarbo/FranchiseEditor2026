@@ -76,7 +76,8 @@ namespace FranchiseEditor2026
         private void add_Click(object sender, EventArgs e)
         {
             string fileName = @"D:\Current YT Vid\stats\teamGame.csv";
-            string outText = gameSel.Value + "," + ((KeyValuePair<int, string>)teamSel.SelectedItem).Key + "," + scoreO.Value + "," + scoreD.Value + "," + passO.Value + "," + rushO.Value + "," + passD.Value + "," + rushD.Value + "," + firsts.Value + "," + trdConv.Value + "," + trdAtt.Value + "," + to.Value + "," + rztdo.Value + "," + rzatto.Value + "," + rztdd.Value + "," + rzattd.Value + "," + timeOfPossession.Text + "," + pen.Value + "," + penYds.Value;
+            string outText = "\n" + gameSel.Value + "," + ((KeyValuePair<int, string>)teamSel.SelectedItem).Key + "," + scoreO.Value + "," + scoreD.Value + "," + passO.Value + "," + rushO.Value + "," + passD.Value + "," + rushD.Value + "," + firsts.Value + "," + trdConv.Value + "," + trdAtt.Value + "," + to.Value + "," + rztdo.Value + "," + rzatto.Value + "," + rztdd.Value + "," + rzattd.Value + "," + timeOfPossession.Text + "," + pen.Value + "," + penYds.Value;
+            MessageBox.Show(outText);
             File.AppendAllText(fileName, outText);
             scoreO.Value = 0;
             scoreD.Value = 0;
@@ -95,6 +96,13 @@ namespace FranchiseEditor2026
             timeOfPossession.Clear();
             pen.Value = 0;
             penYds.Value = 0;
+        }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+            string fileName = @"D:\Current YT Vid\stats\teamGame.csv";
+            string header = "gameID,teamID,scoreO,scoreD,passO,rushO,passD,rushD,firstDown,trdConv,trdAtt,turnover,rzTDO,rzAttO,rzTDD,rzAttD,timeOP,pen,penYds";
+            File.WriteAllText(fileName, header);
         }
     }
 }

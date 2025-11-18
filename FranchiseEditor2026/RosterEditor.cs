@@ -202,7 +202,7 @@ namespace FranchiseEditor2026
                 {
                     query = "UPDATE Roster SET position = @position WHERE playerID = @playerID";
                     string position = new SpecialPositionSelect().GetPos();
-                    using (SqlCommand conn = new(conStr)) 
+                    using (SqlConnection conn = new(conStr)) 
                     {
                         conn.Open();
                         SqlCommand cmd = new(query, conn);

@@ -72,6 +72,7 @@
             label18 = new Label();
             label19 = new Label();
             label20 = new Label();
+            reset = new Button();
             ((System.ComponentModel.ISupportInitialize)yearSel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)weekSel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gameSel).BeginInit();
@@ -468,11 +469,22 @@
             label20.TabIndex = 41;
             label20.Text = "penalty yards";
             // 
+            // reset
+            // 
+            reset.Location = new Point(246, 402);
+            reset.Name = "reset";
+            reset.Size = new Size(170, 33);
+            reset.TabIndex = 42;
+            reset.Text = "reset csv";
+            reset.UseVisualStyleBackColor = true;
+            reset.Click += reset_Click;
+            // 
             // teamGame
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(941, 444);
+            Controls.Add(reset);
             Controls.Add(label20);
             Controls.Add(label19);
             Controls.Add(label18);
@@ -593,5 +605,6 @@
         private Label label18;
         private Label label19;
         private Label label20;
+        private Button reset;
     }
 }
