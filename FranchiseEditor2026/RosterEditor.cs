@@ -97,12 +97,12 @@ namespace FranchiseEditor2026
                     int rows = cmd.ExecuteNonQuery();
                     if (rows > 0)
                     {
-                        MessageBox.Show($"{fullName} cut successfully");
-                        query = $"INSERT INTO transactions VALUES (@playerID, 'release', @oldTeam, 32)";
-                        cmd = new(query, conn);
-                        cmd.Parameters.AddWithValue("@playerID", playerID);
-                        cmd.Parameters.AddWithValue("@oldTeam", ((KeyValuePair<int, string>)teamSel.SelectedItem).Key);
-                        cmd.ExecuteNonQuery();
+                        //MessageBox.Show($"{fullName} cut successfully");
+                        //query = $"INSERT INTO transactions VALUES (@playerID, 'release', @oldTeam, 32)";
+                        //cmd = new(query, conn);
+                        //cmd.Parameters.AddWithValue("@playerID", playerID);
+                        //cmd.Parameters.AddWithValue("@oldTeam", ((KeyValuePair<int, string>)teamSel.SelectedItem).Key);
+                        //cmd.ExecuteNonQuery();
 
                         if (teamSel.SelectedItem is not null) LoadPlayers(((KeyValuePair<int, string>)teamSel.SelectedItem).Key);
                     }
@@ -129,12 +129,12 @@ namespace FranchiseEditor2026
                     int rows = cmd.ExecuteNonQuery();
                     if (rows > 0)
                     {
-                        MessageBox.Show($"{fullName} signed successfully");
-                        query = $"INSERT INTO transactions VALUES (@playerID, 'sign', 32, @newTeam);";
-                        cmd = new(query, conn);
-                        cmd.Parameters.AddWithValue("@playerID", playerID);
-                        cmd.Parameters.AddWithValue("@newTeam", teamID);
-                        cmd.ExecuteNonQuery();
+                        //MessageBox.Show($"{fullName} signed successfully");
+                        //query = $"INSERT INTO transactions VALUES (@playerID, 'sign', 32, @newTeam);";
+                        //cmd = new(query, conn);
+                        //cmd.Parameters.AddWithValue("@playerID", playerID);
+                        //cmd.Parameters.AddWithValue("@newTeam", teamID);
+                        //cmd.ExecuteNonQuery();
                         LoadPlayers(32);
                     }
                     else MessageBox.Show($"Error: {fullName} not found.");
@@ -160,13 +160,13 @@ namespace FranchiseEditor2026
                     int rows = cmd.ExecuteNonQuery();
                     if (rows > 0)
                     {
-                        MessageBox.Show($"{fullName} traded successfully");
-                        query = $"INSERT INTO transactions VALUES (@playerID, 'trade', @oldTeam, @newTeam)";
-                        cmd = new(query, conn);
-                        cmd.Parameters.AddWithValue("@playerID", playerID);
-                        cmd.Parameters.AddWithValue("@oldTeam", ((KeyValuePair<int, string>)teamSel.SelectedItem).Key);
-                        cmd.Parameters.AddWithValue("@newTeam", teamID);
-                        cmd.ExecuteNonQuery();
+                        //MessageBox.Show($"{fullName} traded successfully");
+                        //query = $"INSERT INTO transactions VALUES (@playerID, 'trade', @oldTeam, @newTeam)";
+                        //cmd = new(query, conn);
+                        //cmd.Parameters.AddWithValue("@playerID", playerID);
+                        //cmd.Parameters.AddWithValue("@oldTeam", ((KeyValuePair<int, string>)teamSel.SelectedItem).Key);
+                        //cmd.Parameters.AddWithValue("@newTeam", teamID);
+                        //cmd.ExecuteNonQuery();
                         LoadPlayers(((KeyValuePair<int, string>)teamSel.SelectedItem).Key);
                     }
                     else MessageBox.Show($"Error: {fullName} not found");

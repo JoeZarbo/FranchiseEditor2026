@@ -64,7 +64,7 @@ namespace FranchiseEditor2026
         private void playerAdd_Click(object sender, EventArgs e)
         {
             Hide();
-            using (playerGame pui = new()) pui.ShowDialog();
+            using (playerGameMenu pui = new()) pui.ShowDialog();
             Show();
         }
     }

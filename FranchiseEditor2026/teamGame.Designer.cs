@@ -483,7 +483,7 @@
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(941, 444);
+            ClientSize = new Size(927, 444);
             Controls.Add(reset);
             Controls.Add(label20);
             Controls.Add(label19);
