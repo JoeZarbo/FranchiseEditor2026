@@ -79,7 +79,40 @@ namespace FranchiseEditor2026
             string outText = "\n" + gameSel.Value + "," + ((KeyValuePair<int, string>)teamSel.SelectedItem).Key + "," + scoreO.Value + "," + scoreD.Value + "," + passO.Value + "," + rushO.Value + "," + passD.Value + "," + rushD.Value + "," + firsts.Value + "," + trdConv.Value + "," + trdAtt.Value + "," + to.Value + "," + rztdo.Value + "," + rzatto.Value + "," + rztdd.Value + "," + rzattd.Value + "," + timeOfPossession.Text + "," + pen.Value + "," + penYds.Value;
             MessageBox.Show(outText);
             File.AppendAllText(fileName, outText);
-            scoreO.Value = 0;
+            decimal temp = scoreO.Value;
+            scoreO.Value = scoreD.Value;
+            scoreD.Value = temp;
+            temp = passO.Value;
+            passO.Value = passD.Value;
+            passD.Value = temp;
+            temp = rushO.Value;
+            rushO.Value = rushD.Value;
+            rushD.Value = temp;
+            firsts.Value = 0;
+            trdAtt.Value = 0;
+            trdConv.Value = 0;
+            to.Value = 0;
+            temp = rztdo.Value;
+            rztdo.Value = rztdd.Value;
+            rztdd.Value = temp;
+            temp = rzatto.Value;
+            rzatto.Value = rzattd.Value;
+            rzattd.Value = temp;
+            timeOfPossession.Clear();
+            pen.Value = 0;
+            penYds.Value = 0;
+        }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+            string fileName = @"D:\Current YT Vid\stats\teamGame.csv";
+            string header = "gameID,teamID,scoreO,scoreD,passO,rushO,passD,rushD,firstDown,trdConv,trdAtt,turnover,rzTDO,rzAttO,rzTDD,rzAttD,timeOP,pen,penYds";
+            File.WriteAllText(fileName, header);
+        }
+
+        private void clear_Click(object sender, EventArgs e)
+        {
+            scoreO.Value = scoreD.Value;
             scoreD.Value = 0;
             passO.Value = 0;
             passD.Value = 0;
@@ -91,18 +124,11 @@ namespace FranchiseEditor2026
             to.Value = 0;
             rztdo.Value = 0;
             rztdd.Value = 0;
-            rzattd.Value = 0;
             rzatto.Value = 0;
+            rzattd.Value = 0;
             timeOfPossession.Clear();
             pen.Value = 0;
             penYds.Value = 0;
-        }
-
-        private void reset_Click(object sender, EventArgs e)
-        {
-            string fileName = @"D:\Current YT Vid\stats\teamGame.csv";
-            string header = "gameID,teamID,scoreO,scoreD,passO,rushO,passD,rushD,firstDown,trdConv,trdAtt,turnover,rzTDO,rzAttO,rzTDD,rzAttD,timeOP,pen,penYds";
-            File.WriteAllText(fileName, header);
         }
     }
 }

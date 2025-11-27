@@ -73,6 +73,7 @@
             label19 = new Label();
             label20 = new Label();
             reset = new Button();
+            clear = new Button();
             ((System.ComponentModel.ISupportInitialize)yearSel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)weekSel).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gameSel).BeginInit();
@@ -479,11 +480,22 @@
             reset.UseVisualStyleBackColor = true;
             reset.Click += reset_Click;
             // 
+            // clear
+            // 
+            clear.Location = new Point(422, 402);
+            clear.Name = "clear";
+            clear.Size = new Size(119, 33);
+            clear.TabIndex = 43;
+            clear.Text = "clear";
+            clear.UseVisualStyleBackColor = true;
+            clear.Click += clear_Click;
+            // 
             // teamGame
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             ClientSize = new Size(927, 444);
+            Controls.Add(clear);
             Controls.Add(reset);
             Controls.Add(label20);
             Controls.Add(label19);
@@ -606,5 +618,6 @@
         private Label label19;
         private Label label20;
         private Button reset;
+        private Button clear;
     }
 }
