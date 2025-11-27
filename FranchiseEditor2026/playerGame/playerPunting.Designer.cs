@@ -64,6 +64,7 @@
             // 
             puntYds.Location = new Point(12, 84);
             puntYds.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            puntYds.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
             puntYds.Name = "puntYds";
             puntYds.Size = new Size(120, 36);
             puntYds.TabIndex = 1;
@@ -72,6 +73,7 @@
             // 
             netYds.Location = new Point(12, 126);
             netYds.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            netYds.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
             netYds.Name = "netYds";
             netYds.Size = new Size(120, 36);
             netYds.TabIndex = 2;

@@ -75,6 +75,7 @@
             // 
             intyds.Location = new Point(12, 80);
             intyds.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            intyds.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
             intyds.Name = "intyds";
             intyds.Size = new Size(120, 36);
             intyds.TabIndex = 1;
@@ -111,6 +112,7 @@
             // 
             fyds.Location = new Point(12, 290);
             fyds.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            fyds.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
             fyds.Name = "fyds";
             fyds.Size = new Size(120, 36);
             fyds.TabIndex = 6;

@@ -63,6 +63,7 @@
             // 
             kryds.Location = new Point(12, 79);
             kryds.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            kryds.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
             kryds.Name = "kryds";
             kryds.Size = new Size(120, 36);
             kryds.TabIndex = 1;
@@ -85,6 +86,7 @@
             // 
             pryds.Location = new Point(12, 205);
             pryds.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            pryds.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
             pryds.Name = "pryds";
             pryds.Size = new Size(120, 36);
             pryds.TabIndex = 4;

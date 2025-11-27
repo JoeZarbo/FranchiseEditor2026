@@ -57,6 +57,7 @@
             // 
             yds.Location = new Point(12, 82);
             yds.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            yds.Minimum = new decimal(new int[] { 1000, 0, 0, int.MinValue });
             yds.Name = "yds";
             yds.Size = new Size(120, 36);
             yds.TabIndex = 1;
