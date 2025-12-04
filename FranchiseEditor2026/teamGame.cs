@@ -16,8 +16,8 @@ namespace FranchiseEditor2026
 
         public teamGame(decimal lastWeek)
         {
-            weekSel.Value = lastWeek;
             InitializeComponent();
+            weekSel.Value = lastWeek;
         }
 
         private void yearSel_ValueChanged(object sender, EventArgs e)
