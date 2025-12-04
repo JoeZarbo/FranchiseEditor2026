@@ -12,9 +12,11 @@ namespace FranchiseEditor2026
     public partial class teamGame : Form
     {
         string conStr = Environment.GetEnvironmentVariable("FRANCHISE_CONSTR");
+        public decimal LastWeek => weekSel.Value;
 
-        public teamGame()
+        public teamGame(decimal lastWeek)
         {
+            weekSel.Value = lastWeek;
             InitializeComponent();
         }
 
@@ -106,7 +108,7 @@ namespace FranchiseEditor2026
         private void reset_Click(object sender, EventArgs e)
         {
             string fileName = @"D:\Current YT Vid\stats\teamGame.csv";
-            string header = "gameID,teamID,scoreO,scoreD,passO,rushO,passD,rushD,firstDown,trdConv,trdAtt,turnover,rzTDO,rzAttO,rzTDD,rzAttD,timeOP,pen,penYds";
+            string header = "gameID,teamID,scoreO,scoreD,passO,rushO,passD,rushD,firstDwn,trdConv,trdAtt,turnover,rzTDO,rzAttO,rzTDD,rzAttD,timeOP,pen,penYds";
             File.WriteAllText(fileName, header);
         }
 

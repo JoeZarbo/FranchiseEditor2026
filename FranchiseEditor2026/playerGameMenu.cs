@@ -14,13 +14,15 @@ namespace FranchiseEditor2026
     {
         string conStr = Environment.GetEnvironmentVariable("FRANCHISE_CONSTR");
         BindingList<PlayerGameObj> players, visiblePlayers;
+        public decimal LastWeek => weekSel.Value;
 
-        public playerGameMenu()
+        public playerGameMenu(decimal lastWeek)
         {
             InitializeComponent();
             players = [];
             visiblePlayers = [];
             InitializePlayerGrid();
+            weekSel.Value = lastWeek;
         }
 
         private void InitializePlayerGrid()
@@ -314,6 +316,7 @@ namespace FranchiseEditor2026
                 string row = $"\n{player.PlayerID},{yearSel.Value},{weekSel.Value},{team},{opp},{location},{result},{player.Cmp},{player.PassAtt},{player.PassYds},{player.PassTD},{player.PassINT},{player.PassSK},{player.RushAtt},{player.RushYds},{player.RushTD},{player.Receptions},{player.RecYds},{player.RecTD},{player.DefSK},{player.SoloTak},{player.AstTak},{player.TFL},{player.DefINT},{player.IntYds},{player.IntTD},{player.PD},{player.Fmb},{player.FF},{player.FR},{player.FYds},{player.FTD},{player.DefBlock},{player.KR},{player.KRYds},{player.KRTD},{player.PR},{player.PRYds},{player.PRTD},{player.Pnt},{player.PntYds},{player.RetYds},{player.TB},{player.In20},{player.PuntBlock},{player.XPM},{player.XPA},{player.FGM},{player.FGA},{player.FGBlock},{player.Safety},0,{player.FGLong}";
                 File.AppendAllText(fileName, row);
             }
+            MessageBox.Show("Players exported");
         }
 
         private void ApplyPlayerFilter(string search)

@@ -2,11 +2,13 @@ namespace FranchiseEditor2026
 {
     public partial class MainMenu : Form
     {
+        private decimal lastWeek = 1;
+
         public MainMenu()
         {
             InitializeComponent();
         }
-
+        
         private void close_Click(object sender, EventArgs e)
         {
             Close();
@@ -57,14 +59,14 @@ namespace FranchiseEditor2026
         private void teamAdd_Click(object sender, EventArgs e)
         {
             Hide();
-            using (teamGame tui = new()) tui.ShowDialog();
+            using (teamGame tui = new(lastWeek)) if (tui.ShowDialog() == DialogResult.OK) lastWeek = tui.LastWeek;
             Show();
         }
 
         private void playerAdd_Click(object sender, EventArgs e)
         {
             Hide();
-            using (playerGameMenu pui = new()) pui.ShowDialog();
+            using (playerGameMenu pui = new(lastWeek)) if (pui.ShowDialog() == DialogResult.OK) lastWeek = pui.LastWeek;
             Show();
         }
     }
